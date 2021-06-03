@@ -1,16 +1,36 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Login">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+    <div class="row">
+      <div class="col col-100 padding-horizontal v-al">
+        <div class="text-center padding-top">
+          <h2>Form Login</h2>
+          <div class="card padding">
+            <div class="card-body">
+              <div class="card-item">
+                <div class="list">
+                  <label class="item item-input">
+                    <i class="icon ion-person padding-right"></i>
+                    <span class="input-label">Username </span>
+                    <input type="text" />
+                  </label>
+                  <label class="item item-input">
+                    <i class="icon ion-key padding-right"></i>
+                    <span class="input-label">Password </span>
+                    <input type="password" />
+                  </label>
+                  <button class="button button-full button-balanced btn-r">
+                    Register
+                  </button>
+                  <p>OR</p>
+                  <button class="button button-full button-positive btn-r">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
