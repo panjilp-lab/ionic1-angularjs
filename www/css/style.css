@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+
+/* button border radius */
+.r-btn{
+    border-radius: 15px;
+}
+
+.m-sm-lft {
+    margin-left: 3px;
+}
+
+.m-sm-rgt {
+    margin-right: 3px;
+}
+
+.w-1 {
+    width: 220px;
+}
+
+.w-logo {
+    width: 30px;
+}
