@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
 // })
 
 // belajar 
-.controller('belajarCtrl', function($scope) {
+.controller('belajarCtrl', function($scope, $http) {
 
   $scope.devList = [
     { text: "HTML5", checked: true },
@@ -40,6 +40,20 @@ angular.module('starter.controllers', [])
   
   $scope.pushNotification = { checked: true };
   $scope.emailNotification = 'Subscribed';
+
+  // refresh
+  $scope.items = [1,2,3];
+  $scope.refreshtext = 'Halaman Akan di-refresh'
+  $scope.doRefresh = function() {
+    $http.get('/')
+     .success(function(newItems) {
+       $scope.items = newItems;
+     })
+     .finally(function() {
+       // Stop the ion-refresher from spinning
+       $scope.$broadcast('scroll.refreshComplete');
+     });
+  };
   
 })
 

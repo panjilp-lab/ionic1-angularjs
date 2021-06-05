@@ -16,11 +16,11 @@
     <title>Checkboxes</title>
 
     <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
-    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="../lib/ionic/js/ionic.bundle.js"></script>
     <style>
         body {
-  cursor: url('https://ionicframework.com/img/finger.png'), auto;
-}
+        cursor: url('https://ionicframework.com/img/finger.png'), auto;
+        }
     </style>
   </head>
 
@@ -38,6 +38,7 @@
                       ng-model="item.checked" 
                       ng-checked="item.checked">
           {{ item.text }}
+
         </ion-checkbox>
         
         <div class="item">
@@ -68,6 +69,16 @@
         
       </div>
       
+      <!-- refresh page -->
+      <ion-refresher
+        pulling-text="{{ refreshtext }}"
+        on-refresh="doRefresh()">
+      </ion-refresher>
+
+      <!-- refresh page end -->
+      <button on-double-tap="onDoubleTap()" class="button">Test</button>
+
+
     </ion-content>
     
   </body>
