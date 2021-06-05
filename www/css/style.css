@@ -20,3 +20,15 @@
 .w-logo {
     width: 30px;
 }
+
+.p-color {
+    color: #666;
+}
+
+.rounded {
+    border-radius: 200px;
+}
+
+.orange-400 {
+    color: #fd9843;
+}
